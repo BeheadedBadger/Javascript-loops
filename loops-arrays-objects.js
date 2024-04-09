@@ -16,8 +16,9 @@ const scores = [
 // 66
 // ==========================================
 
-
-
+for (i = 0; i < scores.length; i++) {
+    console.log(scores[i].score)
+}
 
 
 // ==========================================
@@ -32,7 +33,23 @@ const scores = [
 // D
 // ==========================================
 
-
+for (i = 0; i < scores.length; i++) {
+    if (scores[i].score >= 90) {
+        console.log("A");
+    }
+    else if (scores[i].score >= 80) {
+        console.log("B");
+    }
+    else if (scores[i].score >= 70) {
+        console.log("C");
+    }
+    else if (scores[i].score >= 60) {
+        console.log("D");
+    }
+    else {
+        console.log("F");
+    }
+}
 
 
 
@@ -49,9 +66,25 @@ const scores = [
 //  ];
 // ==========================================
 
+for (i = 0; i < scores.length; i++) {
+    if (scores[i].score >= 90) {
+        scores[i].grade = "A";
+    }
+    else if (scores[i].score >= 80) {
+        scores[i].grade = "B";
+    }
+    else if (scores[i].score >= 70) {
+        scores[i].grade = "C";
+    }
+    else if (scores[i].score >= 60) {
+        scores[i].grade = "D";
+    }
+    else {
+        scores[i].grade = "F";
+    }
+}
 
-
-
+console.log(scores);
 
 // ==========================================
 // Opdracht 2
@@ -75,17 +108,22 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
+for (i = 0; i < NOVIEmployees.length; i++) {
+    NOVIEmployees[i].email = NOVIEmployees[i].firstName + "." + NOVIEmployees[i].lastName + "@novi.nl"
+}
 
-
-
+console.log(NOVIEmployees);
 
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
 
+for (i = 0; i < NOVIEmployees.length; i++) {
+    NOVIEmployees[i].email = NOVIEmployees[i].firstName.toLowerCase() + "." + NOVIEmployees[i].lastName.toLowerCase() + "@novi.nl"
+}
 
-
+console.log(NOVIEmployees);
 
 // ==========================================
 // Opdracht 3
@@ -131,5 +169,32 @@ const students = [
 // ]
 // ==========================================
 
+for (i = 0; i < students.length; i++) {
+    switch (students[i].zipCode) {
+        case "3513":
+            students[i].neighborhood = "Pijlsweerd";
+            break;
+        case "3514":
+            students[i].neighborhood = "Vogelenbuurt";
+            break;
+        case "3512":
+            students[i].neighborhood = "Binnenstad";
+            break;
+        case "3531":
+            students[i].neighborhood = "Lombok";
+            break;
+        case "3572":
+            students[i].neighborhood = "Wittevrouwen";
+            break;
+        case "3581":
+            students[i].neighborhood = "Oudwijk";
+            break;
+        case "3583":
+            students[i].neighborhood = "Schildersbuurt";
+            break;
+        default:
+            students[i].neighborhood = "unknown";
+    }
 
-
+    console.log(students[i])
+}
